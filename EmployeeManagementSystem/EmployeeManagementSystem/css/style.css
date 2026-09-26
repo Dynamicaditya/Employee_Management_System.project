@@ -1,0 +1,232 @@
+/* style.css - shared styling for every HTML page in the project */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #222;
+}
+
+/* ---------- Header ---------- */
+header {
+    background: #1f2937;
+    color: #fff;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 16px;
+    font-size: 14px;
+}
+
+/* ---------- Layout: sidebar + content ---------- */
+.layout {
+    display: flex;
+    min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+    width: 220px;
+    background: #111827;
+    color: #d1d5db;
+    padding: 20px 0;
+}
+
+.sidebar a {
+    display: block;
+    color: #d1d5db;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #1f2937;
+    color: #fff;
+    border-left: 4px solid #3b82f6;
+}
+
+.content {
+    flex: 1;
+    padding: 24px;
+}
+
+/* ---------- Cards (dashboard stats) ---------- */
+.card-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.card h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #111827;
+}
+
+/* ---------- Tables ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+th {
+    background: #f3f4f6;
+    color: #374151;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+/* ---------- Forms ---------- */
+.form-box {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #3b82f6;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover { background: #2563eb; }
+
+.btn-danger { background: #ef4444; }
+.btn-danger:hover { background: #dc2626; }
+
+.btn-secondary { background: #6b7280; }
+.btn-secondary:hover { background: #4b5563; }
+
+/* ---------- Login page ---------- */
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111827;
+}
+
+.login-box {
+    background: #fff;
+    padding: 32px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #111827;
+}
+
+.error-message {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 14px;
+    font-size: 12px;
+    color: #6b7280;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* ---------- Status badges ---------- */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-active { background: #d1fae5; color: #065f46; }
+.badge-inactive { background: #fee2e2; color: #991b1b; }
+.badge-pending { background: #fef3c7; color: #92400e; }
+.badge-approved { background: #d1fae5; color: #065f46; }
+.badge-rejected { background: #fee2e2; color: #991b1b; }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Employees - Employee Management System</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Employee Management System</h1>
+    <nav><a href="dashboard.html">Dashboard</a><a href="login.html">Logout</a></nav>
+</header>
+
+<div class="layout">
+    <div class="sidebar">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="employee.html" class="active">Employees</a>
+        <a href="departments.html">Departments</a>
+        <a href="designations.html">Designations</a>
+        <a href="leave.html">Leave Requests</a>
+        <a href="salary.html">Salary</a>
+        <a href="reports.html">Reports</a>
+    </div>
+
+    <div class="content">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+            <h2>Employees</h2>
+            <a href="add-employee.html" class="btn">+ Add Employee</a>
+        </div>
+
+        <!-- Search form: submits to Java (EmployeeService.searchEmployees), no JS -->
+        <form style="margin-bottom:16px; display:flex; gap:8px;">
+            <input type="text" name="keyword" placeholder="Search by ID, Name, or Department" style="max-width:320px;">
+            <button type="submit" class="btn-secondary btn">Search</button>
+        </form>
+
+        <!-- This table is populated from employees.getAllEmployees() in the real app.
+             Static sample rows shown here for the HTML/CSS preview. -->
+        <table>
+            <tr>
+                <th>ID</th><th>Name</th><th>Email</th><th>Department</th>
+                <th>Designation</th><th>Salary</th><th>Status</th><th>Actions</th>
+            </tr>
+            <tr>
+                <td>1</td><td>Rahul Sharma</td><td>rahul.sharma@example.com</td><td>IT</td>
+                <td>Software Developer</td><td>45000</td>
+                <td><span class="badge badge-active">Active</span></td>
+                <td><a href="add-employee.html">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td>2</td><td>Priya Nair</td><td>priya.nair@example.com</td><td>HR</td>
+                <td>HR Executive</td><td>35000</td>
+                <td><span class="badge badge-active">Active</span></td>
+                <td><a href="add-employee.html">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td>5</td><td>Vikram Singh</td><td>vikram.singh@example.com</td><td>Sales</td>
+                <td>Sales Executive</td><td>38000</td>
+                <td><span class="badge badge-inactive">Inactive</span></td>
+                <td><a href="add-employee.html">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<footer>&copy; 2026 Employee Management System</footer>
+</body>
+</html>

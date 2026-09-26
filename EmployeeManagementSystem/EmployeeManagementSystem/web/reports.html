@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reports - Employee Management System</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Employee Management System</h1>
+    <nav><a href="dashboard.html">Dashboard</a><a href="login.html">Logout</a></nav>
+</header>
+
+<div class="layout">
+    <div class="sidebar">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="employee.html">Employees</a>
+        <a href="departments.html">Departments</a>
+        <a href="designations.html">Designations</a>
+        <a href="leave.html">Leave Requests</a>
+        <a href="salary.html">Salary</a>
+        <a href="reports.html" class="active">Reports</a>
+    </div>
+
+    <div class="content">
+        <h2 style="margin-bottom:16px;">Reports</h2>
+
+        <!-- Each report below is powered by a plain SQL SELECT query in the
+             matching DAO class - shown here as static tables for the preview. -->
+
+        <h3 style="margin:16px 0 8px;">All Employees</h3>
+        <table>
+            <tr><th>ID</th><th>Name</th><th>Department</th><th>Status</th></tr>
+            <tr><td>1</td><td>Rahul Sharma</td><td>IT</td><td><span class="badge badge-active">Active</span></td></tr>
+            <tr><td>2</td><td>Priya Nair</td><td>HR</td><td><span class="badge badge-active">Active</span></td></tr>
+            <tr><td>5</td><td>Vikram Singh</td><td>Sales</td><td><span class="badge badge-inactive">Inactive</span></td></tr>
+        </table>
+
+        <h3 style="margin:24px 0 8px;">Department-wise Employees</h3>
+        <table>
+            <tr><th>Department</th><th>Employee Count</th></tr>
+            <tr><td>IT</td><td>1</td></tr>
+            <tr><td>HR</td><td>1</td></tr>
+            <tr><td>Finance</td><td>1</td></tr>
+            <tr><td>Marketing</td><td>1</td></tr>
+            <tr><td>Sales</td><td>1</td></tr>
+        </table>
+
+        <h3 style="margin:24px 0 8px;">Employees on Leave</h3>
+        <table>
+            <tr><th>Employee</th><th>Leave Type</th><th>From</th><th>To</th></tr>
+            <tr><td>Rahul Sharma</td><td>Casual Leave</td><td>2026-09-01</td><td>2026-09-02</td></tr>
+        </table>
+
+        <h3 style="margin:24px 0 8px;">Salary Records</h3>
+        <table>
+            <tr><th>Employee</th><th>Net Salary</th><th>Date</th></tr>
+            <tr><td>Rahul Sharma</td><td>45000</td><td>2026-08-31</td></tr>
+            <tr><td>Priya Nair</td><td>35000</td><td>2026-08-31</td></tr>
+        </table>
+    </div>
+</div>
+
+<footer>&copy; 2026 Employee Management System</footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login - Employee Management System</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-box">
+            <h2>Admin Login</h2>
+
+            <!-- This is a STATIC preview of the login screen design.
+                 The actual login check (username/password against MySQL)
+                 happens in Java: dao/UserDAO.java -> validateLogin(),
+                 called from src/main/Main.java, since plain HTML cannot
+                 run server-side Java code without a servlet container. -->
+
+            <!-- Example error message (shown after a failed login attempt) -->
+            <!-- <div class="error-message">Invalid username or password.</div> -->
+
+            <form>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn" style="width:100%;">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

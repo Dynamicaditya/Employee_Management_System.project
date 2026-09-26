@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Designations - Employee Management System</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Employee Management System</h1>
+    <nav><a href="dashboard.html">Dashboard</a><a href="login.html">Logout</a></nav>
+</header>
+
+<div class="layout">
+    <div class="sidebar">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="employee.html">Employees</a>
+        <a href="departments.html">Departments</a>
+        <a href="designations.html" class="active">Designations</a>
+        <a href="leave.html">Leave Requests</a>
+        <a href="salary.html">Salary</a>
+        <a href="reports.html">Reports</a>
+    </div>
+
+    <div class="content">
+        <h2 style="margin-bottom:16px;">Designations</h2>
+
+        <!-- Add Designation form -> DesignationDAO.addDesignation() -->
+        <form class="form-box" style="margin-bottom:24px; max-width:400px; display:flex; gap:8px; align-items:end;">
+            <div class="form-group" style="flex:1; margin-bottom:0;">
+                <label for="designationName">Designation Name</label>
+                <input type="text" id="designationName" name="designationName" required>
+            </div>
+            <button type="submit" class="btn">Add</button>
+        </form>
+
+        <table>
+            <tr><th>ID</th><th>Designation Name</th><th>Actions</th></tr>
+            <tr><td>1</td><td>Software Developer</td><td><a href="#">Edit</a> | <a href="#">Delete</a></td></tr>
+            <tr><td>2</td><td>HR Executive</td><td><a href="#">Edit</a> | <a href="#">Delete</a></td></tr>
+            <tr><td>3</td><td>Accountant</td><td><a href="#">Edit</a> | <a href="#">Delete</a></td></tr>
+            <tr><td>4</td><td>Manager</td><td><a href="#">Edit</a> | <a href="#">Delete</a></td></tr>
+            <tr><td>5</td><td>Sales Executive</td><td><a href="#">Edit</a> | <a href="#">Delete</a></td></tr>
+        </table>
+    </div>
+</div>
+
+<footer>&copy; 2026 Employee Management System</footer>
+</body>
+</html>

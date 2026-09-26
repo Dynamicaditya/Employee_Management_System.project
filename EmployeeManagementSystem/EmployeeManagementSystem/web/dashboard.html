@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - Employee Management System</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <h1>Employee Management System</h1>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Logout</a>
+    </nav>
+</header>
+
+<div class="layout">
+    <div class="sidebar">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="employee.html">Employees</a>
+        <a href="departments.html">Departments</a>
+        <a href="designations.html">Designations</a>
+        <a href="leave.html">Leave Requests</a>
+        <a href="salary.html">Salary</a>
+        <a href="reports.html">Reports</a>
+    </div>
+
+    <div class="content">
+        <h2 style="margin-bottom:20px;">Dashboard</h2>
+
+        <!-- These numbers are static placeholders in this HTML preview.
+             In the real app, EmployeeDAO.getTotalEmployees(),
+             DepartmentDAO.getTotalDepartments(), etc. calculate them
+             from MySQL using SQL COUNT() queries, with no JavaScript. -->
+        <div class="card-row">
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p>5</p>
+            </div>
+            <div class="card">
+                <h3>Total Departments</h3>
+                <p>5</p>
+            </div>
+            <div class="card">
+                <h3>Active Employees</h3>
+                <p>4</p>
+            </div>
+            <div class="card">
+                <h3>Employees on Leave</h3>
+                <p>1</p>
+            </div>
+        </div>
+
+        <p style="color:#6b7280; font-size:14px;">
+            Use the sidebar to manage employees, departments, designations, leave requests, and salary records.
+        </p>
+    </div>
+</div>
+
+<footer>&copy; 2026 Employee Management System</footer>
+</body>
+</html>
